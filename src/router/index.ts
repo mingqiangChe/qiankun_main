@@ -21,6 +21,7 @@ const routes: Array<RouteRecordRaw> = [
         },
         component: () => import('@/components/vueUse.vue'),
     },
+    //验证请求
     {
         path: '/request',
         name: 'requests',
@@ -30,6 +31,27 @@ const routes: Array<RouteRecordRaw> = [
             requireAuth: false,
         },
         component: () => import('@/components/requestEle.vue'),
+    },
+    // 大数据可视化
+    {
+        path: '/datav',
+        name: 'datav',
+        meta: {
+            title: 'datav',
+            keepAlive: true,
+            requireAuth: false,
+        },
+        component: () => import('@/pages/datav.vue'),
+    },
+    {
+        path: '/dataMap',
+        name: 'dataMap',
+        meta: {
+            title: 'dataMap',
+            keepAlive: true,
+            requireAuth: false,
+        },
+        component: () => import('@/pages/datav/dataMap.vue'),
     },
     {
         path: '/',
