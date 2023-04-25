@@ -61,7 +61,7 @@ const routes: Array<RouteRecordRaw> = [
             keepAlive: true,
             requireAuth: true,
         },
-        component: () => import('@/components/usePinia.vue'),
+        component: () => import('@/pages/mainH.vue'),
     },
 ];
 
