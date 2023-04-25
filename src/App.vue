@@ -1,8 +1,12 @@
+<script setup lang="ts">
+
+</script>
+
 <template>
-  <RouterView />
+
+ <RouterView/>
 </template>
-<style>
-body {
-  background-color: #eee !important;
-}
+
+<style scoped>
+
 </style>

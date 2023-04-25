@@ -1,38 +1,29 @@
 import { defineConfig } from "vite"
 import vue from "@vitejs/plugin-vue"
-import autoprefixer from "autoprefixer"
-import windicss from "vite-plugin-windicss"
-// import AutoImport from "unplugin-auto-import/vite"
-// import Components from "unplugin-vue-components/vite"
-// import { ElementPlusResolver } from "unplugin-vue-components/resolvers"
+import * as path from "path"
+
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [
-    vue(),
-    windicss(),
-    // AutoImport({
-    //   resolvers: [ElementPlusResolver()],
-    // }),
-    // Components({
-    //   resolvers: [ElementPlusResolver()],
-    // }),
-  ],
-  css: {
-    postcss: {
-      plugins: [
-        autoprefixer({
-          overrideBrowserslist: ["Chrome > 40", "ff > 31", "ie 11"],
-        }),
-      ],
+  resolve: {
+    //设置别名
+    alias: {
+      "@": path.resolve(__dirname, "src"),
     },
   },
+  plugins: [vue()],
   server: {
+    port: 8080, //启动端口
+    hmr: {
+      host: "127.0.0.1",
+      port: 8080,
+    },
+    // 设置 https 代理
     proxy: {
-      '/user': {
-        target: 'http://localhost:8080',
+      "/api": {
+        target: "your https address",
         changeOrigin: true,
-        rewrite:(path)=>path.replace(/^\/api/,'')
-      }
-    }
-  }
+        rewrite: (path: string) => path.replace(/^\/api/, ""),
+      },
+    },
+  },
 })

@@ -1,40 +1,50 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router"
+import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
 
 const routes: Array<RouteRecordRaw> = [
   {
-    path: "/",
-    name: "main",
+    path: '/pinia',
+    name: 'pinia',
     meta: {
-      title: "main",
+      title: 'pinia',
       keepAlive: true,
-      requireAuth: false,
+      requireAuth: false
     },
-    component: () => import("../pages/main.vue"),
+    component: () => import('@/components/usePinia.vue')
   },
   {
-    path: "/login",
-    name: "Login",
+    path: '/vueuse',
+    name: 'vueuse',
     meta: {
-      title: "登录",
+      title: 'vueuse',
       keepAlive: true,
-      requireAuth: false,
+      requireAuth: false
     },
-    component: () => import("../pages/login/index.vue"),
+    component: () => import('@/components/vueUse.vue')
   },
   {
-    path: "/table",
-    name: "table",
+    path: '/request',
+    name: 'request',
     meta: {
-      title: "table",
+      title: 'request',
       keepAlive: true,
-      requireAuth: true,
+      requireAuth: false
     },
-    component: () => import("../pages/tableCrund/index.vue"),
+    component: () => import('@/components/request.vue')
   },
+  {
+    path: '/',
+    name: 'Index',
+    meta: {
+      title: '首页',
+      keepAlive: true,
+      requireAuth: true
+    },
+    component: () => import('@/components/usePinia.vue')
+  }
 ]
 
 const router = createRouter({
   history: createWebHistory(),
-  routes,
-})
-export default router
+  routes
+});
+export default router;

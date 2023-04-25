@@ -1,7 +1,5 @@
-import useUserStore from "./user"
+ import { createPinia } from 'pinia'
 
-export default function useStore() {
-  return {
-    user: useUserStore(),
-  }
-}
+ const store = createPinia()
+
+ export default store

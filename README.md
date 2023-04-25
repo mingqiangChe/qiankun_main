@@ -1,18 +1,26 @@
+# 项目名
+
+vue3 vite ts 模板
+
+参考链接https://juejin.cn/post/7079785777692934174#heading-17
+
 # 技术栈
 
-# 主要技术
+vue3
+ts
+vite
 
-Vue 3 + TypeScript + Vite
+# 已完成配置
 
-# 环境配置
-
-.nvmrc 文件当执行 nvm 后会自动启用 node 版本启动命令
-sass 插件 开发环境
-autoprefiexer 兼容浏览器 css 加前缀
-windicss vite-plugin-windicss
-antd 组件库 后面可删除
-element 组件库
+proxy 配置
+eslint 风格统一
 pinia
 router
-eslint
-prettier 集成
+vueuse Composition API 的实用函数集合
+sass
+.nvmrc  指定node版本 尝试nvm insatll试试安装依赖
+commitizen (交互式提交 + 自定义提示文案 + Commit规范)
+使用方法 npm run commit =>  git-cz
+husky（依赖 husky v7.0.4版本）
+
+
