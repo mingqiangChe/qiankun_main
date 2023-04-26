@@ -4,7 +4,7 @@
         <!-- 两套 个人 和简历 -->
         <div v-if="compnent" id="pdfDom" class="row" style="padding-top: 55px">
             <div class="resume">
-                <h2>个人简历</h2>
+                <h2 style="color: #fff">个人简历</h2>
                 <div class="contact">
                     <div class="ximg">
                         <img src="../assets/myself.jpg" alt="" />

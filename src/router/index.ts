@@ -64,6 +64,17 @@ const routes: Array<RouteRecordRaw> = [
         },
         component: () => import('@/pages/mySelf.vue'),
     },
+    //echarts
+    {
+        path: '/echarts',
+        name: 'echarts',
+        meta: {
+            title: 'echarts',
+            keepAlive: true,
+            requireAuth: false,
+        },
+        component: () => import('@/components/echartsExample.vue'),
+    },
     {
         path: '/',
         name: 'Index',
