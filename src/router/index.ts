@@ -41,7 +41,7 @@ const routes: Array<RouteRecordRaw> = [
             keepAlive: true,
             requireAuth: false,
         },
-        component: () => import('@/pages/datav.vue'),
+        component: () => import('@/pages/dataView.vue'),
     },
     {
         path: '/dataMap',
@@ -53,6 +53,17 @@ const routes: Array<RouteRecordRaw> = [
         },
         component: () => import('@/pages/datav/dataMap.vue'),
     },
+    //个人
+    {
+        path: '/mySelf',
+        name: 'mySelf',
+        meta: {
+            title: 'mySelf',
+            keepAlive: true,
+            requireAuth: false,
+        },
+        component: () => import('@/pages/mySelf.vue'),
+    },
     {
         path: '/',
         name: 'Index',
@@ -61,7 +72,7 @@ const routes: Array<RouteRecordRaw> = [
             keepAlive: true,
             requireAuth: true,
         },
-        component: () => import('@/pages/mainH.vue'),
+        component: () => import('@/pages/mainHome.vue'),
     },
 ];
 

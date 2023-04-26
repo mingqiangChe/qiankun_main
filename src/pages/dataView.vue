@@ -16,11 +16,11 @@
             </div>
         </div>
     </div>
-    <fly></fly>
+    <flys></flys>
 </template>
 
 <script lang="ts" setup>
-import fly from '../components/flyBox.vue';
+import flys from '../components/flyBox.vue';
 import btn from '../components/buttonX.vue';
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';

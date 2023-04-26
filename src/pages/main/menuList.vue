@@ -31,6 +31,9 @@ const router = useRouter();
 const pushDatav = () => {
     router.push('/datav');
 };
+const pushMyself = () => {
+    router.push('/mySelf');
+};
 </script>
 <style lang="scss">
 .el-card__body {
