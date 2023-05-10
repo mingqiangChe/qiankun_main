@@ -24,27 +24,30 @@ vueuse Composition API 的实用函数集合
 
 sass
 
-.nvmrc  指定node版本 尝试nvm insatll试试安装依赖
+.nvmrc 指定 node 版本 尝试 nvm insatll 试试安装依赖
 
-commitizen (交互式提交 + 自定义提示文案 + Commit规范)
+commitizen (交互式提交 + 自定义提示文案 + Commit 规范)
 
-使用方法 npm run commit =>  git-cz
+使用方法 npm run commit => git-cz
 
-husky（依赖 husky v7.0.4版本）
+husky（依赖 husky v7.0.4 版本）
 
 # 使用
-## git提交
+
+## 启动项目
+
+yarn run dev
+
+## git 提交
+
 git add .
 
-npm run commit 
+npm run commit
 
 根据命令来选择
 
-git push origin 
+git push origin
 
-版本install
+版本 install
 
 nvm install 即可会自动选择
-
-
-
