@@ -6,6 +6,7 @@ qiankun vue react
 main-nuxt
 main-vue
 main-react
+
 子应用
 sub-vue3
 sub-react
