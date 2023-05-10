@@ -1,5 +1,9 @@
 import { rejects } from 'assert';
-import axios, { AxiosResponse, InternalAxiosRequestConfig } from 'axios';
+import axios, {
+    AxiosResponse,
+    InternalAxiosRequestConfig,
+    AxiosRequestConfig,
+} from 'axios';
 
 const service = axios.create();
 
