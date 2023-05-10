@@ -3,6 +3,18 @@ import axios, { AxiosResponse, InternalAxiosRequestConfig } from 'axios';
 
 const service = axios.create();
 
+/**
+ * 默认配置
+ */
+export const defaultConfig: AxiosRequestConfig = {
+    baseURL: '',
+    timeout: 10000, // 10秒超时
+    headers: {
+        Accept: 'application/json, text/plain, */*',
+        'Content-Type': 'application/json',
+        'X-Requested-With': 'XMLHttpRequest',
+    },
+};
 // Request interceptors
 service.interceptors.request.use(
     (config: InternalAxiosRequestConfig) => {
