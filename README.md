@@ -1,6 +1,6 @@
 # 项目名
 
-vue3 vite ts 模板
+vue3 vite ts 模板 乾坤框架盒子拆分不同主体
 
 参考链接https://juejin.cn/post/7079785777692934174#heading-17
 
@@ -31,6 +31,8 @@ commitizen (交互式提交 + 自定义提示文案 + Commit 规范)
 使用方法 npm run commit => git-cz
 
 husky（依赖 husky v7.0.4 版本）
+
+vite-plugin-qiankun
 
 # 使用
 
