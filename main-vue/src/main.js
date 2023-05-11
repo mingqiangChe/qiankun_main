@@ -33,19 +33,19 @@ Vue.prototype.$actions = actions
 
 const apps = [
   {
-    name: "vueApp1", //应用的名字
+    name: "vue", //个人介绍
     entry: "//localhost:8081", //默认会加载这个html解析里面的js动态的执行(子应用必须支持跨域)fetch
-    container: "#vue1", //容器名
-    activeRule: "/main/vue", //激活的路径
+    container: "#introduction", //容器名
+    activeRule: "/main/introduction", //激活的路径
     props: propsData,
   },
-  {
-    name: "vueApp2", //应用的名字
-    entry: "//localhost:8082", //默认会加载这个html解析里面的js动态的执行(子应用必须支持跨域)fetch
-    container: "#vue2", //容器名
-    activeRule: "/main/vue1", //激活的路径
-    props: propsData,
-  },
+  // {
+  //   name: "vue3Crud", //vue3后台管理
+  //   entry: "//localhost:8082", //默认会加载这个html解析里面的js动态的执行(子应用必须支持跨域)fetch
+  //   container: "#vueCrud", //容器名
+  //   activeRule: "/main/vueCrud", //激活的路径
+  //   props: propsData,
+  // },
 ]
 
 registerMicroApps(apps) //注册应用

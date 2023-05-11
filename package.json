@@ -8,10 +8,10 @@
   "scripts": {
     "install": "npm-run-all --serial install:*",
     "start": "npm-run-all --parallel start:*",
-    "install:main-react": "cd main-react && yarn install",
+    "install:main-vue": "cd main-vue && yarn install",
     "install:sub-vue3": "cd main-vue3 && yarn install",
-    "start:main-react": "cd main-react && yarn start",
-    "start:sub-vue3": "cd sub-vue3 && yarn start"
+    "start:main-vue": "cd main-vue && yarn run serve",
+    "start:sub-vue3": "cd main-vue && yarn run serve"
   },
   "devDependencies": {
     "npm-run-all": "^4.1.5"

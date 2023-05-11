@@ -3,28 +3,20 @@
   <div class="home">
     <el-card class="main">
       <div class="catalogue">
-        <img src="@/assets/bookIcon.png" alt="">
+        <img src="@/assets/bookIcon.png" alt="" />
         序列
       </div>
       <div class="main-one" @click="pushMyself">
-        <img src="@/assets/touIcon.png" alt="">
+        <img src="@/assets/touIcon.png" alt="" />
         个人介绍
       </div>
       <div class="main-two" @click="pushCase">
-        <img src="@/assets/caseIcon.png" alt="">
+        <img src="@/assets/caseIcon.png" alt="" />
         项目案例
       </div>
       <div class="main-three">
-        <img src="@/assets/blogIcon.png" alt="">
+        <img src="@/assets/blogIcon.png" alt="" />
         文章博客
-      </div>
-      <div class="main-four">
-        <img src="@/assets/perceptionIcon.png" alt="">
-        本本记录
-      </div>
-      <div class="main-five" @click="pushContact">
-        <img src="@/assets/touIcon.png" alt="">
-        1432223
       </div>
     </el-card>
   </div>
@@ -35,7 +27,7 @@
 //例如：import 《组件名称》 from '《组件路径》';
 
 export default {
-  name: 'HomeList',
+  name: "HomeList",
   //import引入的组件需要注入到对象中才能使用
   components: {},
   data() {
@@ -49,14 +41,14 @@ export default {
   //方法集合
   methods: {
     pushMyself() {
-      this.$router.push('myself')
+      this.$router.push("myself")
     },
     pushCase() {
-      this.$router.push('case')
+      this.$router.push("case")
     },
     pushContact() {
-      this.$router.push('contact')
-    }
+      this.$router.push("contact")
+    },
   },
   //生命周期 - 创建完成（可以访问当前this实例）
   created() {},
@@ -68,10 +60,10 @@ export default {
   updated() {}, //生命周期 - 更新之后
   beforeDestroy() {}, //生命周期 - 销毁之前
   destroyed() {}, //生命周期 - 销毁完成
-  activated() {} //如果页面有keep-alive缓存功能，这个函数会触发
+  activated() {}, //如果页面有keep-alive缓存功能，这个函数会触发
 }
 </script>
-<style lang='less' scoped>
+<style lang="less" scoped>
 .el-card__body {
   padding: 0px !important;
 }
@@ -87,7 +79,7 @@ export default {
   border-radius: 8px;
   animation: icon 4s linear infinite;
   box-shadow: 2px 2px 10px #909090;
-  
+
   overflow: hidden;
   .catalogue {
     width: 306px;
