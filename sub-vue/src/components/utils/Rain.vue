@@ -1,3 +1,11 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: sueRimn
+ * @Date: 2021-11-18 21:43:25
+ * @LastEditors: sueRimn
+ * @LastEditTime: 2021-11-18 22:28:20
+-->
 <template>
   <div class="rain">
     <canvas id="vue-matrix-raindrop"></canvas>
@@ -6,52 +14,51 @@
 
 <script>
 export default {
-  name: "vue-matrix-raindrop",
+  name: 'vue-matrix-raindrop',
   //插件的各种参数
   props: {
     //canvas宽度
     canvasWidth: {
       type: Number,
-      default: 1920,
+      default: 1920
     },
     //canvas高度
     canvasHeight: {
       type: Number,
-      default: 930,
+      default: 930
     },
     //下落字体大小
     fontSize: {
       type: Number,
-      default: 20,
+      default: 20
     },
     //字体类型
     fontFamily: {
       type: String,
-      default: "arial",
+      default: 'arial'
     },
     //字体文本内容，会随机从字符串里取一个
     textContent: {
       type: String,
-      default: "abcdefghijklmnopqrstuvwxyz",
+      default: 'abcdefghijklmnopqrstuvwxyz'
     },
     //字体颜色
     textColor: {
       type: String,
-      default: "#0F0",
+      default: '#0F0',
       validator: function (value) {
         var colorReg = /^#([0-9a-fA-F]{6})|([0-9a-fA-F]{3})$/g
         return colorReg.test(value)
-      },
+      }
     },
     //canvas背景颜色，可自定义
     backgroundColor: {
       type: String,
-      default: "rgba(0,0,0,0.1)",
+      default: 'rgba(0,0,0,0.1)',
       validator: function (value) {
-        var reg =
-          /^[rR][gG][Bb][Aa][\(]((2[0-4][0-9]|25[0-5]|[01]?[0-9][0-9]?),){2}(2[0-4][0-9]|25[0-5]|[01]?[0-9][0-9]?),?(0\.\d{1,2}|1|0)?[\)]{1}$/
+        var reg = /^[rR][gG][Bb][Aa][\(]((2[0-4][0-9]|25[0-5]|[01]?[0-9][0-9]?),){2}(2[0-4][0-9]|25[0-5]|[01]?[0-9][0-9]?),?(0\.\d{1,2}|1|0)?[\)]{1}$/
         return reg.test(value)
-      },
+      }
     },
     //下落速度
     speed: {
@@ -59,8 +66,8 @@ export default {
       default: 2,
       validator: function (value) {
         return value % 1 === 0
-      },
-    },
+      }
+    }
   },
   mounted: function () {
     this.initRAF()
@@ -96,15 +103,15 @@ export default {
     },
     //初始化canvas
     initCanvas() {
-      this.canvas = document.getElementById("vue-matrix-raindrop")
+      this.canvas = document.getElementById('vue-matrix-raindrop')
       //需要判断获取到的canvas是否是真的canvas
-      if (this.canvas.tagName.toLowerCase() !== "canvas") {
+      if (this.canvas.tagName.toLowerCase() !== 'canvas') {
         console.error("Error! Invalid canvas! Please check the canvas's id!")
       }
       this.canvas.width = this.canvasWidth
       this.canvas.height = this.canvasHeight
-      this.canvasCtx = this.canvas.getContext("2d")
-      this.canvasCtx.font = this.fontSize + "px " + this.fontFamily
+      this.canvasCtx = this.canvas.getContext('2d')
+      this.canvasCtx.font = this.fontSize + 'px ' + this.fontFamily
       this.columns = this.canvas.width / this.fontSize
     },
     //初始化数字雨下落的初始y轴位置
@@ -128,9 +135,7 @@ export default {
         //遍历每一列的数字雨，然后在canvas上绘制该数字字母
         for (var i = 0, len = this.rainDropPositionArray.length; i < len; i++) {
           this.rainDropPositionArray[i]++
-          var randomTextIndex = Math.floor(
-            Math.random() * this.textContent.length
-          )
+          var randomTextIndex = Math.floor(Math.random() * this.textContent.length)
           var randomText = this.textContent[randomTextIndex]
           var textYPostion = this.rainDropPositionArray[i] * this.fontSize
           this.canvasCtx.fillText(randomText, i * this.fontSize, textYPostion)
@@ -143,7 +148,7 @@ export default {
         }
       }
       window.requestAnimationFrame(this.animationUpdate)
-    },
+    }
   },
   data() {
     return {
@@ -151,9 +156,9 @@ export default {
       canvas: null,
       columns: 0,
       rainDropPositionArray: [],
-      speedCnt: 0,
+      speedCnt: 0
     }
-  },
+  }
 }
 </script>
 <!-- Add "scoped" attribute to limit CSS to this component only -->

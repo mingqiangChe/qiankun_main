@@ -1,8 +1,18 @@
+<!--
+ * @Descripttion: 
+ * @version: 
+ * @Author: sueRimn
+ * @Date: 2021-11-24 14:59:26
+ * @LastEditors: sueRimn
+ * @LastEditTime: 2021-11-24 15:04:04
+-->
 <!-- loading -->
 <template>
   <section class="container">
-    <div class="ring-frame"></div>
-    <div class="disc-frame"></div>
+    <div class="ring-frame">
+    </div>
+    <div class="disc-frame">
+    </div>
     <section class="loading">LOADING...</section>
   </section>
 </template>
@@ -23,21 +33,25 @@ export default {
   //监控data中的数据变化
   watch: {},
   //方法集合
-  methods: {},
+  methods: {
+    
+  },
   //生命周期 - 创建完成（可以访问当前this实例）
   created() {},
   //生命周期 - 挂载完成（可以访问DOM元素）
-  mounted() {},
+  mounted() {
+    
+  },
   beforeCreate() {}, //生命周期 - 创建之前
   beforeMount() {}, //生命周期 - 挂载之前
   beforeUpdate() {}, //生命周期 - 更新之前
   updated() {}, //生命周期 - 更新之后
   beforeDestroy() {}, //生命周期 - 销毁之前
   destroyed() {}, //生命周期 - 销毁完成
-  activated() {}, //如果页面有keep-alive缓存功能，这个函数会触发
+  activated() {} //如果页面有keep-alive缓存功能，这个函数会触发
 }
 </script>
-<style lang="less" scoped>
+<style lang='less' scoped>
 .container {
   height: 100%;
   width: 100%;

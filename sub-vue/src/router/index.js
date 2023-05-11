@@ -6,17 +6,18 @@ Vue.use(VueRouter)
 const routes = [
   {
     path: "/",
-    redirect: "/home",
+    redirect: "/myself",
   },
   {
-    path: "/home",
-    name: "home",
-    component: Home,
+    path: "/myself",
+    name: "myself",
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/MySelf.vue"),
   },
 ]
 
 const router = new VueRouter({
-  mode: "history",
+  mode: "hash",
   base: process.env.BASE_URL,
   routes,
 })
