@@ -1,15 +1,19 @@
-import { defineStore } from 'pinia';
-
-export const useUserStore = defineStore({
-  id: '748577',
-  state: () => {
+import { defineStore } from "pinia"
+export default defineStore("user", {
+  state() {
     return {
-      name: '张三',
-    };
+      userList: [] as IUser[],
+    }
   },
   actions: {
-    updateName(name: string) {
-      this.name = name;
+    getList() {
+      // 模拟从后端获取数据
+      let resList: IUser[] = [
+        { name: "张三", age: 18 },
+        { name: "李四", age: 19 },
+      ]
+      //   resList[0].name  此时resList[0]只能点出 name 或 age
+      this.userList = resList
     },
   },
-});
+})

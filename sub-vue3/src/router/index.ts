@@ -1,94 +1,40 @@
-import { createRouter, createWebHistory, RouteRecordRaw } from 'vue-router';
+import { createRouter, createWebHistory, RouteRecordRaw } from "vue-router"
 
 const routes: Array<RouteRecordRaw> = [
-    {
-        path: '/pinia',
-        name: 'pinia',
-        meta: {
-            title: 'pinia',
-            keepAlive: true,
-            requireAuth: false,
-        },
-        component: () => import('@/components/usePinia.vue'),
+  {
+    path: "/",
+    name: "main",
+    meta: {
+      title: "main",
+      keepAlive: true,
+      requireAuth:false,
     },
-    {
-        path: '/vueuse',
-        name: 'vueuse',
-        meta: {
-            title: 'vueuse',
-            keepAlive: true,
-            requireAuth: false,
-        },
-        component: () => import('@/components/vueUse.vue'),
+    component: () => import("../pages/main.vue"),
+  },
+  {
+    path: "/login",
+    name: "Login",
+    meta: {
+      title: "登录",
+      keepAlive: true,
+      requireAuth: false,
     },
-    //验证请求
-    {
-        path: '/request',
-        name: 'requests',
-        meta: {
-            title: 'requests',
-            keepAlive: true,
-            requireAuth: false,
-        },
-        component: () => import('@/components/requestEle.vue'),
+    component: () => import("../pages/login/index.vue"),
+  },
+  {
+    path: "/table",
+    name: "table",
+    meta: {
+      title: "table",
+      keepAlive: true,
+      requireAuth: true,
     },
-    // 大数据可视化
-    {
-        path: '/datav',
-        name: 'datav',
-        meta: {
-            title: 'datav',
-            keepAlive: true,
-            requireAuth: false,
-        },
-        component: () => import('@/pages/dataView.vue'),
-    },
-    {
-        path: '/dataMap',
-        name: 'dataMap',
-        meta: {
-            title: 'dataMap',
-            keepAlive: true,
-            requireAuth: false,
-        },
-        component: () => import('@/pages/datav/dataMap.vue'),
-    },
-    //个人
-    {
-        path: '/mySelf',
-        name: 'mySelf',
-        meta: {
-            title: 'mySelf',
-            keepAlive: true,
-            requireAuth: false,
-        },
-        component: () => import('@/pages/mySelf.vue'),
-    },
-    //echarts
-    {
-        path: '/echarts',
-        name: 'echarts',
-        meta: {
-            title: 'echarts',
-            keepAlive: true,
-            requireAuth: false,
-        },
-        component: () => import('@/components/echartsExample.vue'),
-    },
-    {
-        path: '/',
-        name: 'Index',
-        meta: {
-            title: '首页',
-            keepAlive: true,
-            requireAuth: true,
-        },
-        component: () => import('@/pages/mainHome.vue'),
-    },
-];
+    component: () => import("../pages/tableCrund/index.vue"),
+  },
+]
 
 const router = createRouter({
-    history: createWebHistory(),
-    routes,
-});
-export default router;
+  history: createWebHistory(),
+  routes,
+})
+export default router
