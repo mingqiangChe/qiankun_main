@@ -1,10 +1,5 @@
 import React from 'react';
 import './index.less';
-// interface data {
-//     name: string;
-//     des: string;
-//     img: string;
-// }
 type son = {
     name: string;
     des: string;

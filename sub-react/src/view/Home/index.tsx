@@ -36,7 +36,8 @@ function Home() {
         {name: 'Mobx 数据更新', icon: <HardDrives />, link: '/home/mobx'},
         {name: 'Phosphor 图标库', icon: <InstagramLogo />, link: '/home/four'},
         {name: 'Svg 封装', icon: <IceCream />, link: '/home/icon'},
-        {name: '三大核心属性', icon: <IceCream />, link: '/home/sstate'}
+        {name: '三大核心属性', icon: <IceCream />, link: '/home/sstate'},
+        {name: '组件传值', icon: <IceCream />, link: '/home/props'}
     ];
 
     const handleClickLink = (link: string) => {

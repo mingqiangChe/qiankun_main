@@ -17,6 +17,7 @@ const Dashboard = SuspenseLazy(() => import(/* webpackChunkName:"dashboard" */ '
 const About = SuspenseLazy(() => import(/* webpackChunkName:"about" */ '@/view/About'));
 const NotFound = SuspenseLazy(() => import(/* webpackChunkName:"about" */ '@/view/NotFound'));
 const Study = SuspenseLazy(() => import(/* webpackChunkName:"about" */ '@/view/study'));
+const Props = SuspenseLazy(() => import(/* webpackChunkName:"about" */ '@/view/study/connection'));
 
 const routes: RouteObject[] = [
     {
@@ -55,6 +56,10 @@ const routes: RouteObject[] = [
             {
                 path: 'sstate',
                 element: Study
+            },
+            {
+                path: 'props',
+                element: Props
             }
         ]
     },
