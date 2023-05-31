@@ -4,12 +4,15 @@ import './index.less';
 
 export default function Refs() {
     // const inputRef = useRef(null);
-    const inputRef = useRef<HTMLInputElement | null>(null);
+    // const inputRef = useRef<HTMLInputElement | null>(null);
+    const inputRef = useRef<Input>(null);
 
     const [state, setState] = useState<string>('iuiuiuiu');
     const handleChange = () => {
         // console.log(inputRef.current.input.value);
-        setState(inputRef.current.input.value);
+        if (inputRef.current && inputRef.current.input) {
+            setState(inputRef.current.input.value);
+        }
     };
 
     const img =

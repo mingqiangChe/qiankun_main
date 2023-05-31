@@ -5,7 +5,7 @@ import Son from '@/view/study/connection/son/son';
 export default function Sonconnect() {
     const [childvalue, setChildValue] = useState('');
 
-    const handleChildValueChange = (value) => {
+    const handleChildValueChange = (value: string) => {
         setChildValue(value);
     };
     return (

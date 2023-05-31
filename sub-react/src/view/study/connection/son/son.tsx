@@ -2,9 +2,9 @@
 import React, {useState} from 'react';
 import './index.less';
 import {Input} from 'antd';
-export default function Son({onValueChange}) {
+export default function Son({onValueChange}: {onValueChange: (value: string) => void}) {
     const [inputValue, setInputValue] = useState('');
-    const handleChange = (e) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const value = e.target.value;
         setInputValue(value);
         onValueChange(value);
